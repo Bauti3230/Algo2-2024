@@ -1,0 +1,13 @@
+a. Dado el siguiente vector v = {11, 2, 21, 4, 98, 67, 43, 5, 17} ordenar el mismo utilizando Quick Sort eligiendo elpivote al elemento que corresponde al valor del medio del vector si la cantidad de elementos es impar, por el contrario si es par se toma el último elemento.
+
+Digamos que los queremos ordenar de menor a mayor:
+
+Como la cantidad de elementos es impar tomamos a {98} como nuestro pivote y queremos buscar aquellos elmentos que sean menores a el entonces comenzamos a iterar : 
+
+Como todos son menores a el a la izquierda la posicion del pivote va aumentando a medida que iteramos y no realizamos ningun swapeo porque de alguna forma swapeamos sobre el elemento donde estamos iterando por lo que no cambia el orden inicial. Esto se mantiene hasta llegar al {98}, ya que no es menor a si mismo y la posicion del pivote se queda ahi. Seguimos iterando y como el resto de los elementos del vector son menores al {98} este se va a ir adelantando hasta la ultima posicon.
+
+Ahora dividimos el vector que nos queda {11,2,21,4,67,43,5,17}{98}, la cantidad de elementos a ordenar ahora es 8 por lo que tomamos como pivote al {17} y buscamos aquellos que sean menores a el. Iteramos hasta llegar al {24} donde la posicion del pivote se queda, aumentamos una posicion mas y encontramos al {4} que es menor a {17} por lo que swapeamos entre el {24} y el {4}, el vector actualmente seria asi {11,2,4,21,67,43,5,17}. Tanto el {67} como el {43} son mayores a {17} por lo que la posicion del pivote no cambia, cuando llegamos {5} que es menor a {17} lo swapeamos con el {24} quedando el vector asi {11,2,4,5,67,43,24,17}, swapeamos entre el {67} y el {17} entonces el vector queda asi {11,2,4,5,17,43,24,67}.
+
+Lo dividimos entre los menores a {17} y los mayores a {17} quedandonos 2 vectores {11,2,4,5} y {43.24.67}. Acomodamos primero los menores tomando como pivote al {5} y buscamos los menores, {11} no es por lo que la posicion del pivote se queda ahi, swapeamos el {11} con el {2},{4} y {5} el vector par queda asi {2,4,5,11} y el imapr queda {24,43,67}.
+
+Ahora juntamos todo y queda {2,4,5,11,17,24,43,67,98}

@@ -1,0 +1,15 @@
+//a. Dado un vector v ponga un ejemplo en el cual conviene usar Merge Sort en vez de Quick Sort. Explíquelo paso a paso.
+
+Los casos donde conviene usar Merge Sort en vez de Quick Sort es cuando tenemos vectores ya ordenas ya que el peor caso de Quick Sort, que es O(n^2), se da en estos casos mientras que Merge Sort se mantiene con una complejidad de O(log(n)). 
+Un ejemplo seria:
+	v = {1,2,3,4,5,6,7,8,9,10} un vector ya ordenado
+
+	Con Quick Sort tomariamos un pivote y su posicion y dividiriamos de manera poco eficiente el vector.
+
+	Mientras que con Merge Sortg dividirimos el vector a la mitad
+	{1,2,3,4,5} {6,7,8,9,10}
+	Recursivamente iriamos dividiendo y ordenando los partes del vector con Merge Sort
+	{1,2} {3,4,5} {6,7} {8,9,10}
+	{1}{2} {3}{4,5} {6}{7} {8} {9,10}
+				{4}{5}			{9}{10}
+	Luego uniriamos todo nuevamente y nos quedaria ordenado, ya que previamnte ya los estaba. Por lo que en las situaciondes donde se puedan presentar estos casos lo mas aconsejable es usar Merge Sort ya que su complejidad computacional no varia.

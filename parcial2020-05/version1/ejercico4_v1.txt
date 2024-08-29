@@ -1,0 +1,7 @@
+a. Dado un vector v y el método de ordenamiento Quick Sort, ponga un ejemplo en el cual el tiempo de ejecución sea O(n^2).
+Explíquelo paso a paso.
+
+Un caso donde el metodo tendria una complejidad O(n^2) seria cuando v, un vector, ya ordenado (Ya sea de menor a mayor o bien de mayor a menor). Por ejemplo:
+v = {1,2,3,4,5,6,7} entonces en la primera llamada tomamos como como la posicon de pivote a la primera posicion {1} y como pivote a la ultima {7}, iteramos verificando que elementos son menores a {7} y el vector se parte de la siguiente manera 
+{1,2,3,4,5,6}{7}, segunda iteracion tomando esta vez como pivote al {6} (la posicion de pivote siguie igual), iteramos y verificamos que elementos son menores al {6} {1,2,3,4,5}{6}. Este proceso se repite hasta el ultimo elemento, lo que podemos concluir es que cada vez que seleccionamos el primer elemento como pivote en un vector que ya está ordenado, el pivote no divide el vector de manera efectiva. Esto lleva a una partición muy desbalanceada.
+

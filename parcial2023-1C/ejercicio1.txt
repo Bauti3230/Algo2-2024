@@ -1,0 +1,7 @@
+1) Explique qué es el Teorema Maestro y cómo se utiliza. Escriba las ecuaciones de recurrencia
+que representan a los algoritmos de Mergesort y Quicksort. Explique si estas ecuaciones pueden
+o no ser resueltas mediante el uso del Teorema Maestro. En caso negativo, explique de qué otra
+forma se puede llegar a un resultado.
+
+El teorema mastero sirve para calcular la complejidad de funciones recursivas que tengan la forma de T(n) = A*F(n/B) + O(n) y si se cumple que A >= 1 y B > 1. Este puede tener 3 posible resultados si C = n^(logB(A)) es mayor a O(f(n)) entonces es C si es menor es O(f(n)) y si es igual es log(n)*C.
+Ambas pueden ser resultas por el Teorema Maestro y 

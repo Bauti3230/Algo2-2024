@@ -1,0 +1,18 @@
+2) Inserte los siguientes elementos en orden de aparicion en un árbol AVL. Muestre el paso a paso.
+¿Cómo cambia el resultado final con un ABB y por qué es importante la distinción?
+
+Elementos=[A,B,C,G,D,E,F]
+
+Para insertar estos elementos en un AVL insertamos como en un ABB : 
+									A
+									 \
+									  B
+									   \
+									    C
+										 \
+										  G
+										 /  \
+										D    F
+										 \
+										  E
+Pero como es un AVL y es auto balanceado

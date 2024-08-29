@@ -1,0 +1,22 @@
+a. Hallar la ecuación de recurrencia del Merge Sort T(n)= A*T(n/B) + f(n), explicando detalladamente cómo se obtuvo.
+Calcular su Orden de complejidad en el peor, mejor y caso promedio.
+
+T(n) es el "tiempo de ejecucion", a es el numero subproblemas, b es el factor sobre le cual se reduce ese subproblema f(n) es el tiempo necesario para dividir, combinar y realizar otras operaciones en el nivel actual.
+
+a=2 y b=2 ya que con a dividimos la lista en dos mitades en cada caso y con b dividimos a la mitad la lista en cada paso. La función f(n) representa el tiempo necesario para combinar las sublistas ordenadas. En el caso del Merge Sort, el tiempo de fusión es lineal al tamaño de las sublistas, es decir, O(n), donde n es el tamaño de la lista.
+
+Por lo que la ecuacion de recurrencia del Merge Sort queda como T(n) = 2*T(n/2) + O(n)
+
+Peor Caso:
+En el peor caso, el Merge Sort realiza O(nlogn) comparaciones para ordenar la lista, donde n es el tamaño de la lista. Esto se puede demostrar utilizando el teorema maestro con la ecuación de recurrencia T(n)=2T(n/2)+O(n).
+
+Mejor Caso:
+En el mejor caso, el Merge Sort también realiza O(nlogn) comparaciones. Aunque las sublistas ya pueden estar ordenadas, todavía hay una cantidad lineal de tiempo requerido para fusionar las sublistas.
+
+Caso Promedio:
+El caso promedio de Merge Sort también es O(nlogn), ya que no hay un cambio significativo en el rendimiento esperado en comparación con el peor caso. Esto se debe a que el algoritmo divide siempre la lista en mitades iguales, independientemente del contenido de la lista.
+
+b. Calcular la complejidad del siguiente código en C:
+codigo tendria que hacer el producto de los 3 bucles y la verificacon : O(n) x O(n) x O(n) x O(1) = O(n^3).
+Por lo que la complejidad del codigo es O(n^3).
+El codigo tiene 3 bucles anidados en los cuales se itera desde 0 hasta n por lo que cada bucle, individualmente, tiene una complejidad O(n). En los bucles hay una verificacion la cual tiene complejidad O(1). Para calcular la complejidad del 

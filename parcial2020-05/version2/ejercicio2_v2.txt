@@ -1,0 +1,30 @@
+a. Hallar la ecuación de recurrencia del Quick Sort T(n)= A*T(n/B) + f(n), explicando detalladamente cómo se obtuvo.
+Calcular su Orden de complejidad en el peor, mejor y caso promedio.
+
+T(n) es el tiempo de ejecución del algoritmo para una entrada de tamaño 
+a es el número de subproblemas en los que se divide el problema original.
+b es el factor por el cual el problema se reduce en cada división.
+f(n) es el tiempo necesario para dividir y combinar las particiones, así como cualquier otra operación en el nivel actual.
+Para el Quick Sort:
+
+a=2 ya que se dividen las listas en dos partes.
+b=2 en el caso ideal, pero puede variar según cómo se elija el pivote.
+La función 
+f(n) representa el tiempo necesario para elegir un pivote y particionar la lista. En el caso promedio, esto es lineal al tamaño de la lista, es decir, 
+
+Por lo tanto, la ecuación de recurrencia para Quick Sort es:
+
+Ahora, podemos calcular la complejidad temporal en el peor, mejor y caso promedio:
+
+Peor Caso:
+En el peor caso, si el pivote elegido divide la lista en un solo subarray y el otro subarray contiene todos los demás elementos, entonces el Quick Sort se degrada a una complejidad cuadrática de . Esto ocurre cuando el pivote elegido es siempre el mínimo o el máximo de la lista en cada partición.
+
+Mejor Caso:
+En el mejor caso, el Quick Sort realiza O(nlogn) comparaciones y particiones. Esto ocurre cuando el pivote divide la lista en dos partes aproximadamente iguales en cada paso.
+
+Caso Promedio:
+El caso promedio de Quick Sort también es O(nlogn). Esto se debe a que, aunque la elección del pivote puede variar, se espera que, en promedio, la partición sea equilibrada, lo que lleva a un rendimiento similar al mejor caso.
+
+b. Calcular la complejidad del siguiente código en C:
+
+La complejidad del codigo es O(1) ya que solo se verifica y el valor del elemento ni determina el tamanio del problema

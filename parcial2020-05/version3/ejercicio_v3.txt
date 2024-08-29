@@ -1,0 +1,10 @@
+a. Explique detalladamente para qué sirve el Teorema Maestro, cuándo puede aplicarse, qué tres casos analiza, ponga un
+ejemplo de cada uno de ellos. Demuestre su aplicación en un caso especial.
+
+Es un metodo para analizar la complejidad temporal de algoritmos recursivos. Sirve para encontrar la complejidad temporal de una función recursiva cuando su ecuación de recurrencia sigue un patrón específico. El Teorema Maestro se aplica cuando la ecuación de recurrencia tiene la forma:
+
+T(n) = aT(n/2) + O(f(n))
+
+b. Calcular la complejidad del siguiente código en C:
+
+O(n) x O(1) + O(j*k) x O(1) 
